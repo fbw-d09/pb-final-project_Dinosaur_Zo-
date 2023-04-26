@@ -23,7 +23,7 @@ class Dinosaur {
     }
 
     status() {
-        return `${this.name} has got LP: ${this.lp} and Energy:${this.energy}`;
+        return `${this.name} has got 🔋️LP: ${this.lp} and ✨️EP:${this.energy}`;
 
     }
 
@@ -39,7 +39,7 @@ class Dinosaur {
 
             if (target.lp <= 0) {
                 target.lp = 0;
-                return `${target.name} has been defeated by ${this.name}! ${this.name} is the winner!`
+                return ` ${this.name} attacks with ${selectedSkill.name} ${target.name} has been defeated! ${this.name} is the winner! 👑️ `
             }
 
             return `${this.name} attacks ${target.name} with ${selectedSkill.name}!`
@@ -48,36 +48,38 @@ class Dinosaur {
 
         else if (!selectedSkill) {
             // return `${this.name} doesn't know that attack!`
-            return `${this.name} got distracted and failed to attack`
+            return `${this.name} 🌀️ got distracted and failed to attack`
         }
 
         else {
-            return `${this.name} doesn't have enough EP to use this attack!`
+            return `${this.name} doesn't have enough ✨️EP to use this attack!`
         }
 
     }
 
     regainEnergy() {
-        let regainedEP = this.energy + 50;
-        if (this.diet === 'herbivore') {
 
-            return `${this.name} regained `
+        if (this.diet === 'herbivor') {
+            this.lp += 150;
+            this.energy += 100;
+            return `${this.name} regained 🔋️LP:${this.lp} and  ✨️EP:${this.energy} by eating some herbs🌿️🍀️`
         }
+
+
         else if (this.diet === 'carnivor') {
-
-            return `${this.name} regained ${regainedEP} energyPoints by eating some flesh `
+            this.lp += 100;
+            this.energy += 80;
+            return `${this.name} regained 🔋️LP:${this.lp} and  ✨️EP:${this.energy}  by eating some meat 🥩️🦤️`
         }
+
         else {
-            return `${this.name} catched a giant Meganeura and fully restored its energy !`
+            this.lp += 130;
+            this.energy += 90;
+            return `${this.name} regained 🔋️LP:${this.lp} and  ✨️EP:${this.energy} by eating seafood 🦑️🦐️🦞️🦀️ !`
         }
 
     }
 }
-
-
-
-
-
 
 
 
