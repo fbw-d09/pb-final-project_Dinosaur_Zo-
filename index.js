@@ -1,3 +1,11 @@
+
+//                                              !LETS PLAY!
+//                                  (1 vs 1) = Winner vs Winner = (1 vs 1)
+//                                      👑️ King of the Dinosaurs 👑️
+
+
+
+//Import der Klassen Dinosaur/AttackSkill
 const Dinosaur = require('./src/Dinosaur');
 
 const AttackSkill = require('./src/AttackSkill');
