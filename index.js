@@ -61,24 +61,31 @@ const schreckenbiss = new AttackSkill('Schreckensbiss🦷️', 80, 40);
 const krallenwurf = new AttackSkill('Krallenwurf🔱️', 90, 30);
 
 //dinosaur learns attack
-divider("dinoattacks")
+divider1("learning attacks")
 console.log(ankylosaurus.learnSkill(keulenschlag));
 console.log(ankylosaurus.learnSkill(stacheltornado));
-console.log(ankylosaurus);
+
 
 console.log(megalodon.learnSkill(donnerzahn));
 console.log(megalodon.learnSkill(hyperflut));
-console.log(megalodon);
+
 
 console.log(argentinosaurus.learnSkill(donnertritt));
 console.log(argentinosaurus.learnSkill(megaschlag));
-console.log(argentinosaurus);
+
 
 
 console.log(allosaurus.learnSkill(krallenwurf));
 console.log(allosaurus.learnSkill(schreckenbiss));
-console.log(allosaurus);
 
+
+divider("dinosaurs ready to fight");
+divider1("fight1");
+console.log(ankylosaurus);
+console.log(megalodon);
+divider1("fight2");
+console.log(argentinosaurus);
+console.log(allosaurus);
 
 // FIGHT 1
 divider("💫️ FIGHT 1: Ankylosaurus vs. Megalodon");
@@ -140,7 +147,8 @@ divider1("result");
 console.log(argentinosaurus.status());
 console.log(megalodon.status());
 divider("this was: the king of the dinosaurs👑️")
-//divider("THE WINNER 👑️ ")
+divider1("copy right: chaoz company 2023")
+
 
 
 
