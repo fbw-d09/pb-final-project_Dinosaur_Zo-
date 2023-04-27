@@ -5,14 +5,12 @@
 
 
 
-function divider(input)
-{
+function divider(input) {
     const spacer = "=".repeat(40);
     console.log("\n" + spacer, input, spacer, "\n");
 };
 
-function divider1(input)
-{
+function divider1(input) {
     const spacer = "-".repeat(40);
     console.log("\n" + spacer, input, spacer, "\n");
 };
@@ -20,7 +18,7 @@ function divider1(input)
 
 //Import der Klassen Dinosaur/AttackSkill
 const Dinosaur = require('./src/Dinosaur');
-
+const Damage = require('./src/Damage');
 const AttackSkill = require('./src/AttackSkill');
 
 
@@ -28,8 +26,8 @@ const AttackSkill = require('./src/AttackSkill');
 const ankylosaurus = new Dinosaur('🐊️Ankylosaurus', 'herbivor', 220, 150);
 //console.log(ankylosaurus);
 
-const megalodon = new Dinosaur('🦈️ Megalodon', 'piscivor', 260, 170);
-//console.log(megalodon);
+const mosasaurus = new Dinosaur('🦈️ Mosasaurus', 'piscivor', 260, 170);
+//console.log(mosasaurus);
 
 const argentinosaurus = new Dinosaur('🦕️ Argentinosaurus', 'herbivor', 240, 180);
 //console.log(argentinosaurus);
@@ -37,6 +35,12 @@ const argentinosaurus = new Dinosaur('🦕️ Argentinosaurus', 'herbivor', 240,
 const allosaurus = new Dinosaur('🦖️ Allosaurus', 'carnivor', 190, 130);
 //console.log(allosaurus);
 
+//                      Damages:/ name   /  lpLoss
+const astroidImpact = new Damage('Astorid', 30);
+const vulcanicEruption = new Damage('Vulcan', 40);
+
+// console.log(astroidImpact.astroidImpactDamage());
+// console.log(vulcanicEruption(2));
 
 
 //new attackSkill                     name       damage/energyLoss
@@ -66,8 +70,8 @@ console.log(ankylosaurus.learnSkill(keulenschlag));
 console.log(ankylosaurus.learnSkill(stacheltornado));
 
 
-console.log(megalodon.learnSkill(donnerzahn));
-console.log(megalodon.learnSkill(hyperflut));
+console.log(mosasaurus.learnSkill(donnerzahn));
+console.log(mosasaurus.learnSkill(hyperflut));
 
 
 console.log(argentinosaurus.learnSkill(donnertritt));
@@ -82,26 +86,27 @@ console.log(allosaurus.learnSkill(schreckenbiss));
 divider("dinosaurs ready to fight");
 divider1("fight1");
 console.log(ankylosaurus);
-console.log(megalodon);
+console.log(mosasaurus);
 divider1("fight2");
 console.log(argentinosaurus);
 console.log(allosaurus);
 
 // FIGHT 1
-divider("💫️ FIGHT 1: Ankylosaurus vs. Megalodon");
+divider("💫️ FIGHT 1: Ankylosaurus vs. Mosasaurus");
 divider1("status");
 console.log(ankylosaurus.status());
-console.log(megalodon.status());
+console.log(mosasaurus.status());
 divider1("💥️fight💥️")
-console.log(ankylosaurus.attack(megalodon, [0]));
-console.log(megalodon.attack(ankylosaurus, [1]));
-console.log(ankylosaurus.attack(megalodon, [1]));
+console.log(ankylosaurus.attack(mosasaurus, [0]));
+console.log(mosasaurus.attack(ankylosaurus, [1]));
+console.log(ankylosaurus.attack(mosasaurus, [1]));
 divider1("final hit")
-console.log(megalodon.attack(ankylosaurus,[0]));
+console.log(mosasaurus.attack(ankylosaurus, [0]));
 divider1("result");
 console.log(ankylosaurus.status());
+console.log(ankylosaurus.attack());
 divider1("regain");
-console.log(megalodon.regainEnergy());
+console.log(mosasaurus.regainEnergy());
 divider1;
 
 
@@ -122,31 +127,37 @@ console.log(allosaurus.attack(argentinosaurus, [2]));
 console.log(argentinosaurus.attack(allosaurus, [1]));
 console.log(allosaurus.status());
 // console.log(argentinosaurus.status());
-console.log(allosaurus.attack(argentinosaurus,[0]));
+console.log(allosaurus.attack(argentinosaurus, [0]));
 divider1("final hit");
-console.log(argentinosaurus.attack(allosaurus,[1]));
+console.log(argentinosaurus.attack(allosaurus, [1]));
+divider1("result");
+console.log(allosaurus.status());
+console.log(allosaurus.attack());
 divider1("regain");
 console.log(argentinosaurus.regainEnergy());
 
 
 //FIGHT 3
-divider("💫️ FINAL FIGHT: Megalodon vs Argentinosaurus");
+divider("💫️ FINAL FIGHT: Mosasaurus vs Argentinosaurus");
 divider1("status");
-console.log(megalodon.status());
+console.log(mosasaurus.status());
 console.log(argentinosaurus.status());
 divider1("💥️fight💥️");
-console.log(megalodon.attack(argentinosaurus,[1]));
-console.log(argentinosaurus.attack(megalodon,[0]));
-console.log(megalodon.regainEnergy());
+console.log(mosasaurus.attack(argentinosaurus, [1]));
+console.log(argentinosaurus.attack(mosasaurus, [0]));
+console.log(mosasaurus.regainEnergy());
 console.log(argentinosaurus.regainEnergy());
-console.log(megalodon.attack(argentinosaurus,[1]));
-console.log(argentinosaurus.attack(megalodon,[1]));
+console.log(mosasaurus.attack(argentinosaurus, [1]));
+console.log(argentinosaurus.attack(mosasaurus, [1]));
 divider1("final hit");
-console.log(megalodon.attack(argentinosaurus,[0]));
+console.log(mosasaurus.attack(argentinosaurus, [0]));
 divider1("result");
 console.log(argentinosaurus.status());
-console.log(megalodon.status());
+console.log(argentinosaurus.attack());
+divider("the winner is:");
+console.log(mosasaurus.declareWinner());
 divider("this was: the king of the dinosaurs👑️")
+divider1("thx for playing");
 divider1("copy right: chaoz company 2023")
 
 
