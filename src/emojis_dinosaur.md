@@ -27,5 +27,13 @@ herbs
 
 
 //else
-
+🐚️🐙️🦐️🦑️
 🦑️🦐️🦞️🦀️ 💫️
+
+
+
+🎇️ asteriod
+
+🌋️vulcanicEruption
+
+🏔️iceAge

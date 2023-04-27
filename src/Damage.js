@@ -1,22 +1,24 @@
 
 
 class Damage {
-    constructor(name, lpLoss) {
+    constructor(name, lpLoss, lp) {
         this.name = name;
         this.lpLoss = lpLoss;
+        this.lp = lp;
     }
-    astroidImpactDamage() {
-        this.lpLoss -= 30;  
-        return `oh wow look at this! a ${this.name} crashed right next to the fighting dinos and caused LP: ${this.lpLoss}`
+    asteroidImpactDamage(dinosaur) {
+      //  this.lpLoss -= 30;
+        const asteroidDamage = dinosaur.lp-this.lpLoss;
+        return `oh wow look at this! a 🎇️ ${this.name} 🎇️ crashed right next to the fighting dinos and caused ${asteroidDamage} damage on ${dinosaur.name}`
     }
-    vulcanicEruption(num) {
-        if (num >= 0 && num <= 5) {
-            this.lpLoss -= num;
-            return `stunning! a  ${this.name} ! the lava damaged the dinosaurs and caused ${this.lpLoss}`
-        }
+    // vulcanicEruption(num) {
+    //     if (num >= 0 && num <= 5) {
+    //         this.lpLoss -= num;
+    //         return `stunning! a 🌋️  ${this.name} 🌋️ ! the lava damaged the dinosaurs and caused ${this.lpLoss}`
+    //     }
 
 
-    }
+    // }
 
 
 }

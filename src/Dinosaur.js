@@ -27,12 +27,13 @@ class Dinosaur {
 
     }
 
-    declareWinner(){
+    declareWinner() {
         return ` NEW KING OF THE DINOSAURS : ${this.name} 👑️! `
     }
+
     //target param = dino who gets attacked / skillindex = eine der erlernten attacken im skills array an pos.
     attack(target, skillIndex) {
-        if (this.lp <= 0){
+        if (this.lp <= 0) {
             return `${this.name} is dead!`
         }
 
@@ -51,7 +52,7 @@ class Dinosaur {
 
             return `${this.name} attacks ${target.name} with ${selectedSkill.name}!`
         }
-      
+
 
         else if (!selectedSkill) {
             // return `${this.name} doesn't know that attack!`
@@ -82,7 +83,7 @@ class Dinosaur {
         else {
             this.lp += 130;
             this.energy += 90;
-            return `${this.name} regained 🔋️LP:${this.lp} and  ✨️EP:${this.energy} by eating seafood 🦑️🦐️🦞️🦀️ !`
+            return `${this.name} regained 🔋️LP:${this.lp} and  ✨️EP:${this.energy} by eating   🐚️🐙️🦀️ !`
         }
 
     }

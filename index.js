@@ -35,12 +35,14 @@ const argentinosaurus = new Dinosaur('🦕️ Argentinosaurus', 'herbivor', 240,
 const allosaurus = new Dinosaur('🦖️ Allosaurus', 'carnivor', 190, 130);
 //console.log(allosaurus);
 
-//                      Damages:/ name   /  lpLoss
-const astroidImpact = new Damage('Astorid', 30);
-const vulcanicEruption = new Damage('Vulcan', 40);
+// //                      Damages:/ name   /  lpLoss/epLoss
+// const asteroidImpact = new Damage('Asteroid', 40);
+// //const vulcanicEruption = new Damage('Vulcan', 40);
 
-// console.log(astroidImpact.astroidImpactDamage());
-// console.log(vulcanicEruption(2));
+// const asteroidDamage = asteroidImpact.asteroidImpactDamage(allosaurus);
+// console.log(asteroidDamage);
+// console.log(allosaurus.status());
+
 
 
 //new attackSkill                     name       damage/energyLoss
